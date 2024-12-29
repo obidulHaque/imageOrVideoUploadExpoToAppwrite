@@ -8,6 +8,19 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "packagerOpts": {
+      "sourceExts": [
+        "expo.ts",
+        "expo.tsx",
+        "expo.js",
+        "expo.jsx",
+        "js",
+        "json",
+        "ts",
+        "tsx"
+      ],
+      "proxy": true
+    },
     "ios": {
       "supportsTablet": true
     },
@@ -15,7 +28,13 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "INTERNET",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "package": "com.obaidul.videoUpload"
     },
     "web": {
       "bundler": "metro",
@@ -36,6 +55,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "c8db2a97-d643-4d67-9752-a53afe9a5725"
+      }
     }
   }
 }
